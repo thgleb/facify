@@ -1,0 +1,25 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="assets/styles.css">
+<title>Image Gallery</title>
+
+<header class="gallery-heading">
+    <h1 class="gallery-heading__title">Curabitur consequat, lectus sit amet luctus vulputate ut repudiandae</h1>
+    <p class="gallery-heading__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit aliquid officia doloremque dolor tenetur eveniet totam! <span class="gallery-heading__text-more">Debitis nesciunt rem, eos officia expedita minus a, natus ut numquam, suscipit eius placeat laborum libero id ab! Ipsam earum non officia minus quia minima dolore, similique fuga ab id, consequatur beatae soluta accusantium quasi veniam in aspernatur sed odit. Nulla sapiente maxime, facere sed repellendus, magni earum, quo perspiciatis, sit consequuntur facilis accusantium officia quia eos vel mollitia animi voluptatum nisi corporis fugit. Minus ut repudiandae fugiat fuga reprehenderit alias accusantium placeat temporibus earum id autem labore illo quidem laboriosam, consequatur voluptates, eum.</span></p>
+
+    <button class="gallery-heading__more-btn">Read more...</button>
+</header>
+
+<script>
+    var headingMoreBtn = document.querySelector(".gallery-heading__more-btn"),
+        headingTextMore = document.querySelector(".gallery-heading__text-more");
+
+    if (headingMoreBtn)
+        headingMoreBtn.addEventListener("click", handleHeadingMore);
+
+    function handleHeadingMore() {
+        headingMoreBtn.parentNode.removeChild(headingMoreBtn);
+        headingTextMore.classList.add("gallery-heading__text-more_shown");
+    }
+</script>
