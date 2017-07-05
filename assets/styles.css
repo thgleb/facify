@@ -22,6 +22,10 @@ body {
 .gallery-heading {
     padding: 0 30px;
     line-height: 1.8rem;
+
+    text-align: justify;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 .gallery-heading__title {
     margin: 50px auto 40px auto;
@@ -31,10 +35,8 @@ body {
     font-size: 2rem;
     line-height: 2.8rem;
 }
-.gallery-heading {
-    text-align: justify;
-    max-width: 1000px;
-    margin: 0 auto;
+.gallery-heading__text {
+    font-size: 1rem;
 }
 .gallery-heading__more-btn {
     display: none;
