@@ -108,6 +108,8 @@ body {
     max-width: 100%;
     min-width: 100%;
     vertical-align: bottom;
+
+    font-family: 'object-fit: cover;'; /* for IE, Edge */
 }
 .gallery__item:nth-child(4n+4) {
     flex-basis: 450px;
