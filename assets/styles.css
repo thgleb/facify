@@ -17,6 +17,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+body._fixed {
+    position: fixed;
+}
 
 /* Heading */
 .gallery-heading {
@@ -165,4 +168,39 @@ body {
     justify-content: flex-end;
     text-align: center;
     border-top: 1px solid rgba(0, 0, 0, .05);
+}
+
+/* Image Full View */
+.fi {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .8);
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fi__image {
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+}
+.fi__close {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 130%;
+    background: #000;
+    color: #fff;
+    border: none;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
 }
