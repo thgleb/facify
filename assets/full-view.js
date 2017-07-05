@@ -27,12 +27,21 @@
                 closeView(e.target);
         });
 
+        window.addEventListener("keydown", handleEscKey);
+
         document.body.classList.add("_fixed");
         document.body.appendChild(view);
+    }
+
+    function handleEscKey(e) {
+        if (e.keyCode === 27)
+            closeView(document.querySelector(".fi"));
     }
 
     function closeView(view) {
         document.body.classList.remove("_fixed");
         view.parentNode.removeChild(view);
+
+        window.removeEventListener("keydown", handleEscKey);
     }
 })();
