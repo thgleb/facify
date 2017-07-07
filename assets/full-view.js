@@ -13,8 +13,13 @@
     function handleView(e) {
         e.preventDefault();
 
-        var view = document.importNode(tpl.content, true);
-        view.querySelector(".fi__image").src = e.currentTarget.href;
+        var view = document.importNode(tpl.content, true),
+            img = view.querySelector(".fi__image");
+
+        img.src = e.currentTarget.href;
+
+        if (e.currentTarget.hasAttribute("data-srcset"))
+            img.srcset = e.currentTarget.getAttribute("data-srcset");
 
         view.querySelector(".fi__close").addEventListener("click", function() {
             closeView(this.parentNode);
