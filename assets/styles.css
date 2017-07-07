@@ -189,10 +189,13 @@ body._fixed {
     align-items: center;
 }
 .fi__image {
-    display: block;
+    display: none;
 
     max-width: 100%;
     max-height: 100%;
+}
+.fi__image.fi__image_shown {
+    display: block;
 }
 .fi__close {
     width: 50px;

@@ -14,12 +14,18 @@
         e.preventDefault();
 
         var view = document.importNode(tpl.content, true),
+            loader = view.querySelector(".fi__loader"),
             img = view.querySelector(".fi__image");
 
         img.src = e.currentTarget.href;
 
         if (e.currentTarget.hasAttribute("data-srcset"))
             img.srcset = e.currentTarget.getAttribute("data-srcset");
+
+        img.addEventListener("load", function() {
+            img.classList.add("fi__image_shown");
+            loader.parentNode.removeChild(loader);
+        });
 
         view.querySelector(".fi__close").addEventListener("click", function() {
             closeView(this.parentNode);
