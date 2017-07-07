@@ -9,6 +9,11 @@ html {
     html {
         font-size: 110%;
     }
+}
+@media (min-width: 1500px) {
+    html {
+        font-size: 130%;
+    }
 } 
 body {
     font-family: Helvetica, Arial, sans-serif;
@@ -25,6 +30,8 @@ body._fixed {
 .gallery-heading {
     padding: 0 30px;
     line-height: 1.8rem;
+
+    box-sizing: border-box;
 
     text-align: justify;
     max-width: 1000px;
@@ -51,6 +58,12 @@ body._fixed {
     font: inherit;
     margin-top: 10px;
     padding: 3px 10px;
+}
+@media (min-width: 1300px) {
+    .gallery-heading__title {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
 }
 @media (max-width: 650px) {
     html { font-size: 90%; }
@@ -85,11 +98,29 @@ body._fixed {
     }
 }
 
+/* Content */
+.content {
+    flex: 1;
+}
+@media (min-width: 1300px) {
+    .content {
+        flex-direction: row;
+        display: flex;
+    }
+    .gallery-heading {
+        width: 30vw;
+        margin: initial;
+    }
+    .gallery {
+        width: 70vw;
+        box-sizing: border-box;
+    }
+}
+
 /* Images gallery */
 .gallery {
     --grid-gap: 10px;
 
-    flex: 1;
     display: flex;
     flex-wrap: wrap;
     padding: calc(var(--grid-gap) / 2);
