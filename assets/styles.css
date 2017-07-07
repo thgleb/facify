@@ -171,6 +171,9 @@ body._fixed {
 }
 
 /* Image Full View */
+#full-view-tpl {
+    display: none;
+}
 .fi {
     position: fixed;
     left: 0;
